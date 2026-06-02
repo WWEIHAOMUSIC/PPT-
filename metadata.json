@@ -1,0 +1,6 @@
+{
+  "name": "AI微课生成器",
+  "description": "上传课件PPT或输入大纲，由AI智能生成生动的讲课讲稿、合成专业配音，并直接导出高清微课教学视频。",
+  "requestFramePermissions": ["display-capture"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

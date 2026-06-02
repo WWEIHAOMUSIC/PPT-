@@ -1,0 +1,80 @@
+import { ThemeStyle } from "../types";
+
+export const THEME_PRESETS: ThemeStyle[] = [
+  {
+    id: "tech-blue",
+    name: "智能科技蓝",
+    themeType: "dark",
+    background: "bg-radial from-slate-900 via-slate-950 to-black text-slate-100 border border-teal-500/20",
+    textColor: "text-slate-200",
+    titleColor: "bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-300 font-bold",
+    accentBg: "bg-cyan-500/10 border border-cyan-400/30",
+    accentText: "text-cyan-400",
+    fontFamily: "font-sans",
+    cardStyle: "bg-slate-900/60 border border-slate-800 backdrop-blur-md rounded-xl p-6 shadow-xl shadow-cyan-950/20",
+  },
+  {
+    id: "chalkboard-dark",
+    name: "复古黑板报",
+    themeType: "dark",
+    background: "bg-[#18392B] text-slate-100 border-8 border-amber-900 shadow-inner",
+    textColor: "text-slate-100/90",
+    titleColor: "text-amber-100 font-extrabold tracking-wide drop-shadow-md",
+    accentBg: "border border-dashed border-white/40 bg-white/5",
+    accentText: "text-amber-200",
+    fontFamily: "font-mono font-bold",
+    cardStyle: "border border-white/20 bg-emerald-950/25 p-5 rounded-lg list-none shadow-md",
+  },
+  {
+    id: "forest-green",
+    name: "自然护眼绿",
+    themeType: "light",
+    background: "bg-gradient-to-b from-emerald-50 via-green-50 to-emerald-100/40 text-emerald-900 border border-emerald-200/30",
+    textColor: "text-emerald-800/90",
+    titleColor: "text-emerald-950 font-extrabold",
+    accentBg: "bg-emerald-600/10 border border-emerald-600/20",
+    accentText: "text-emerald-700",
+    fontFamily: "font-sans",
+    cardStyle: "bg-white/80 border border-emerald-100/50 rounded-2xl p-6 shadow-lg shadow-emerald-900/5",
+  },
+  {
+    id: "warm-sunshine",
+    name: "阳光暖木色",
+    themeType: "light",
+    background: "bg-gradient-to-tr from-amber-50/70 via-orange-50/30 to-yellow-1050/10 text-amber-950 border border-amber-100",
+    textColor: "text-amber-900",
+    titleColor: "text-amber-950 font-bold decoration-amber-400 decoration-3 underline-offset-8",
+    accentBg: "bg-amber-100 border border-amber-200",
+    accentText: "text-amber-800",
+    fontFamily: "font-sans",
+    cardStyle: "bg-amber-50/50 border border-amber-200/60 rounded-xl p-6 shadow-md shadow-amber-900/5",
+  },
+  {
+    id: "crimson-editorial",
+    name: "国风书院红",
+    themeType: "light",
+    background: "bg-stone-50 text-stone-900 border-l-[16px] border-red-700 shadow-sm",
+    textColor: "text-stone-700",
+    titleColor: "text-red-800 font-extrabold font-serif tracking-tight",
+    accentBg: "bg-red-50 border border-red-200/50",
+    accentText: "text-red-700 font-serif",
+    fontFamily: "font-serif",
+    cardStyle: "bg-white border-b-2 border-stone-200 rounded-lg p-5 shadow-sm",
+  },
+  {
+    id: "minimal-modern",
+    name: "极简现代白",
+    themeType: "light",
+    background: "bg-white text-slate-900 border border-slate-200/80",
+    textColor: "text-slate-600",
+    titleColor: "text-slate-900 font-light tracking-tight",
+    accentBg: "bg-slate-50 border border-slate-200",
+    accentText: "text-slate-800",
+    fontFamily: "font-sans",
+    cardStyle: "bg-slate-50/50 border-t border-slate-100 p-6 rounded-none shadow-none",
+  }
+];
+
+export function getThemePreset(id: string): ThemeStyle {
+  return THEME_PRESETS.find((t) => t.id === id) || THEME_PRESETS[0];
+}
